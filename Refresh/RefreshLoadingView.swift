@@ -30,8 +30,8 @@ public class RefreshLoadingView: UIView {
     // MARK: - Lazy load
     public lazy var loadingView: UIActivityIndicatorView = {
         let indicatorView = UIActivityIndicatorView.init(frame: .zero)
-        let style = UIActivityIndicatorViewStyle.gray
-        indicatorView.activityIndicatorViewStyle = style
+        let style = UIActivityIndicatorView.Style.gray
+        indicatorView.style = style
         indicatorView.startAnimating()
         return indicatorView
     }()

@@ -10,11 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var index = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.refreshBlock = { [weak self] in
+            print(self ?? "")
+        }
     }
 
-
+    @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
+        index = sender.selectedSegmentIndex
+        if index == 0 {
+            tableView.set(loadType: .normal)
+        } else if index == 1 {
+            tableView.set(loadType: .loading)
+        } else if index == 2 {
+            tableView.set(loadType: .noData)
+        } else if index == 3 {
+            tableView.set(loadType: .noNetwork)
+        } else if index == 4 {
+            tableView.set(loadType: .error)
+        }
+    }
+    
 }
 
