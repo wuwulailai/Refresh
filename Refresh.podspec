@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "刷新数据和网络异常"
 
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "刷新数据和网络异常"
 
   s.homepage     = "https://github.com/wuwulailai/Refresh"
   
